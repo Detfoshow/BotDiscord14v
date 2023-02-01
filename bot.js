@@ -39,7 +39,7 @@ client.player = new DisTube(client, {
 
 const player = client.player;
 client.language = config.language || "es";
-let lang = require(`./lenguaje/${config.language || "es"}.js`);
+let lang = require(`./lenguajes/${config.language || "es"}.js`);
 
 fs.readdir("./events", (_err, files) => {
   files.forEach((file) => {
