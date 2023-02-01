@@ -2,7 +2,7 @@ const config = require("../config.js");
 const { ActivityType  } = require("discord.js")
 module.exports = async (client) => {
 let lang = client.language
-lang = require(`../languages/${lang}.js`);
+lang = require(`../lenguajes/${lang}.js`);
 
 if (config.mongodbURL || process.env.MONGO) {
 

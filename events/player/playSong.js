@@ -2,7 +2,7 @@ const db = require("../../mongoDB");
 module.exports = async (client, queue, song) => {
 let lang = await db?.musicbot?.findOne({ guildID: queue?.textChannel?.guild?.id })
 lang = lang?.language || client.language
-lang = require(`../../languages/${lang}.js`);
+lang = require(`../../lenguajes/${lang}.js`);
 if (queue) {
 if (!client.config.opt.loopMessage && queue?.repeatMode !== 0) return;
 if (queue?.textChannel) {

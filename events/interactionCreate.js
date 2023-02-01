@@ -5,7 +5,7 @@ const fs = require("fs")
 module.exports = async (client, interaction) => {
     let lang = await db?.musicbot?.findOne({ guildID: interaction?.guild?.id })
     lang = lang?.language || client.language
-    lang = require(`../languages/${lang}.js`);
+    lang = require(`../lenguajes/${lang}.js`);
 try {
 if (!interaction?.guild){
 return interaction?.reply({ content: "Este bot es solo para servidores y puede ser usado en servidores.", ephemeral: true })

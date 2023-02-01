@@ -5,7 +5,7 @@ if(queue || queue?.playing){
 if(client?.config?.opt?.voiceConfig?.leaveOnEmpty?.status === true){
 let lang = await db?.musicbot?.findOne({ guildID: queue?.textChannel?.guild?.id })
 lang = lang?.language || client.language
-lang = require(`../languages/${lang}.js`);
+lang = require(`../lenguajes/${lang}.js`);
 setTimeout(async() => {
 let botChannel = oldState?.guild?.channels?.cache?.get(queue?.voice?.connection?.joinConfig?.channelId)
 if(botChannel){
@@ -25,7 +25,7 @@ return queue?.stop(oldState.guild.id)
 if(newState.id === client.user.id){
 let lang = await db?.musicbot?.findOne({ guildID: queue?.textChannel?.guild?.id })
 lang = lang?.language || client.language
-lang = require(`../languages/${lang}.js`);
+lang = require(`../lenguajes/${lang}.js`);
 if(oldState.serverMute === false && newState.serverMute === true){
 if(queue?.textChannel){
 try {
