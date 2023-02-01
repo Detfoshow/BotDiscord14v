@@ -20,6 +20,7 @@ const client = new Client({
   ],
 });
 
+
 client.config = config;
 
 client.player = new DisTube(client, {
